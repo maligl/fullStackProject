@@ -1,0 +1,6 @@
+  <input type="button" class="show-users-btn" (click)="showGrid = true" value="Show Users" />
+  <ag-grid-angular *ngIf="showGrid" class="ag-theme-balham" 
+    [rowData]="users | async" 
+    [columnDefs]="columnDefs"
+    [onGridReady]="onGridReady" domLayout='autoHeight' suppressColumnVirtualisation=false>
+  </ag-grid-angular>

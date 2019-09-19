@@ -1,0 +1,24 @@
+{
+    "development": {
+        "config_id": "development",
+        "node_port": 8080,
+        "database": {
+            "host": "10.0.0.4",
+            "dialect": "mysql",
+            "schema": "ttmc",
+            "user": "Mali",
+            "password": "mM123456"
+        }
+    },
+    "production": {
+        "config_id": "production",
+        "node_port": 8080,
+        "database": {
+            "host": "10.0.0.4",
+            "dialect": "mysql",
+            "schema": "ttmc",
+            "user": "Mali",
+            "password": "mM123456"
+        }
+    }
+}
