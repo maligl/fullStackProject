@@ -1,4 +1,4 @@
-export default function(sequelize, Sequelize) {
+module.exports = function(sequelize, Sequelize) {
     var UserSchema = sequelize.define('User', {
         id: { type: Sequelize.INTEGER, primaryKey: true},
         name: Sequelize.STRING,

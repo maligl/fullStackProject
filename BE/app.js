@@ -8,6 +8,8 @@ var users = require('./api/users');
 
 const config = require("./config.json")
 const environment = process.env.NODE_ENV || 'development';
+const environmentConfig = config[environment];
+ 
 
 //Sync Database
 models.sequelize.sync().then(function () {
@@ -26,10 +28,10 @@ app.use('/users', users);
 
 // index path
 app.get('/', function (req, res) {
-    console.log('app listening on port: ' + config.node_port);
+    console.log('app listening on port: ' + environmentConfig.node_port);
     res.send('tes express nodejs mysql')
 });
 
-app.listen(port, function () {
-    console.log('app listening on port: ' + config.node_port);
+app.listen(environmentConfig.node_port, function () {
+    console.log('app listening on port: ' + environmentConfig.node_port);
 });
