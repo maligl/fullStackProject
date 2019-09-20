@@ -1,0 +1,17 @@
+<!--
+Template for the user-form.component
+-->
+
+<form (ngSubmit)="addUser()">
+  <label>
+    User Name: 
+  </label>
+  <input type="text" name="user" [(ngModel)]="name" />
+  <br/>
+  <label>
+      Description: 
+    </label>
+    <input type="text" name="description" [(ngModel)]="description" />
+    <br/>
+  <button class="u-button" type="submit">Add</button>
+</form>

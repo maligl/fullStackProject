@@ -6,7 +6,7 @@ import { AppComponent } from './app.component';
 import { UserModule } from './user/user.module';
 import { HttpModule } from '@angular/http';
 import { AgGridModule } from 'ag-grid-angular';
-
+import {HttpClientModule} from '@angular/common/http'
 @NgModule({
   declarations: [
     AppComponent
@@ -16,6 +16,7 @@ import { AgGridModule } from 'ag-grid-angular';
     AppRoutingModule,
     UserModule,
     HttpModule,
+    HttpClientModule,
     AgGridModule.withComponents([])
   ],
   providers: [],

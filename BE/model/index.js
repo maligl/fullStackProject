@@ -12,7 +12,6 @@ var sequelize = new Sequelize(dbConfig.schema, dbConfig.user, dbConfig.password,
     define: {
         timestamps: false
     }
-
 });
 
 var db = {};

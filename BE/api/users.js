@@ -8,7 +8,6 @@ router.get('/', function(req, res){
     User.findAll({
         include: [{model: Privilege, as: 'Privileges'}]
     }).then(users => {
-        res.setHeader('Access-Control-Allow-Origin', 'http://localhost:4200');
         res.json(users);
     });
 });
@@ -27,11 +26,10 @@ router.get('/:id', function(req, res){
     });
 });
 
-router.post('/', function(req, res){
+router.post('/add', function(req, res){
     User.create({ 
-        title: req.body.title,
-        author: req.body.author, 
-        category: req.body.category 
+        name: req.body.name,
+        description: req.body.description, 
     }).then(user => {
         console.log(user.get({
           plain: true
@@ -42,9 +40,8 @@ router.post('/', function(req, res){
 
 router.put('/:id', function(req, res){
     User.update({
-        title: req.body.title,
-        author: req.body.author,
-        category: req.body.category
+        name: req.body.name,
+        description: req.body.description,
     },{ 
         where: { id: req.params.id } 
     }).then(result => {

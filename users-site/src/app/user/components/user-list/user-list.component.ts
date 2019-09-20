@@ -6,6 +6,7 @@ import { Component } from '@angular/core';
 import { UserService } from "../../services/user.service";
 import { User } from '../../models/user';
 import { Observable } from 'rxjs';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'user-list',
@@ -15,7 +16,8 @@ import { Observable } from 'rxjs';
 export class UserListComponent {
   public users: Observable<User[]>;
   public columnDefs = [];
-  constructor(private _userService: UserService) {
+  private initialized = false;
+  constructor(private _userService: UserService, private _router:Router) {
     this.columnDefs = [
       { headerName: 'User Name', field: 'name' },
       {
@@ -28,12 +30,14 @@ export class UserListComponent {
       { headerName: 'Description', field: 'description' }
     ];
   }
-
+  
   ngOnInit() {
     this.users = this._userService.getUsers();
+    this.initialized = true;
   }
   
-  public onGridReady(params:any){
+  public onGridReady(params:any, o:any){
     params.api.sizeColumnsToFit() ;
   }
+
 }

@@ -10,11 +10,11 @@ export class User{
   public description: string;
   public privileges : Privilege[];
 
-  constructor(json : any){
-    this.id = json['id'] || -1;
-    this.name = json['name'] || '';
-    this.description = json['description'] || '';
-    var privileges_json = json['Privileges'] || '';
+  constructor(userObj : any){
+    this.id = userObj.id || -1;
+    this.name = userObj.name || '';
+    this.description = userObj.description || '';
+    var privileges_json = userObj.Privileges || [];
     this.privileges = [];
     for(let i=0; i<privileges_json.length; i++){
      this.privileges.push(new Privilege(privileges_json[i]));
