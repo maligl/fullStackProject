@@ -1,6 +1,6 @@
 <div class="grid-container">
   <ag-grid-angular *ngIf="initialized" class="ag-theme-balham" [rowData]="users | async" [columnDefs]="columnDefs"
-    [onGridReady]="onGridReady" domLayout='autoHeight' suppressColumnVirtualisation=false>
+    [onGridReady]="onGridReady" domLayout='autoHeight' suppressColumnVirtualisation=false >
   </ag-grid-angular>
 </div>
 <input type="button" class="u-button" (click)="_router.navigate(['/create-user']);" value="Add User" />

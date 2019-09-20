@@ -2,16 +2,16 @@
 Template for the user-form.component
 -->
 
-<form (ngSubmit)="addUser()">
+<form (ngSubmit)="addUser()" #userForm="ngForm">
   <label>
     User Name: 
   </label>
-  <input type="text" name="user" [(ngModel)]="name" />
+  <input type="text" name="user" [(ngModel)]="name" required/>
   <br/>
   <label>
       Description: 
     </label>
-    <input type="text" name="description" [(ngModel)]="description" />
+    <input type="text" name="description" [(ngModel)]="description" required />
     <br/>
-  <button class="u-button" type="submit">Add</button>
+  <button class="u-button" [disabled]="!userForm.form.valid" type="submit">Add</button>
 </form>
