@@ -3,22 +3,22 @@
         "config_id": "development",
         "node_port": 8080,
         "database": {
-            "host": "10.0.0.4",
+            "host": "localhost",
             "dialect": "mysql",
             "schema": "ttmc",
-            "user": "Mali",
-            "password": "mM123456"
+            "user": "changeMe",
+            "password": "changeMe"
         }
     },
     "production": {
         "config_id": "production",
         "node_port": 8080,
         "database": {
-            "host": "10.0.0.4",
+            "host": "localhost",
             "dialect": "mysql",
             "schema": "ttmc",
-            "user": "Mali",
-            "password": "mM123456"
+            "user": "changeMe",
+            "password": "changeMe"
         }
     }
 }
