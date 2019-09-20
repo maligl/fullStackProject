@@ -34,4 +34,5 @@ The next steps are:
 - CRUD - currently, there is only an api for it, on client you can just ADD user (without its privileges).
 - form validations
 - tests
+- CORS - block access to all domains except the Users API.
 
