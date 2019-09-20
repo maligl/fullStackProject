@@ -26,7 +26,7 @@ It is built with Angular
 
 
 ## Roadmap
-The project is not fully developed due to time constraint.
+The project is not fully developed due to time constraints.
 
 The next steps are: 
 
